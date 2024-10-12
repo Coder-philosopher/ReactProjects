@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Button.css";
 
-function Button() {
+function Buttonch() {
   const [count, setCount] = useState(0);
   const [message, setMessage] = useState("");
 
@@ -36,4 +36,4 @@ function Button() {
   );
 }
 
-export default Button;
+export default Buttonch;

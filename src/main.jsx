@@ -19,7 +19,7 @@ import App4 from "./Foreign/src4/App.jsx";
 import App5 from "./Foreign/src5/App.jsx";
 import App6 from "./Foreign/src6/App.jsx";
 import App7 from "./Foreign/src7/App.jsx";
-import Button from "./Foreign/src8/Button.jsx";
+import Buttonch from "./Foreign/src8/button.jsx";
 import App9 from "./Foreign/src9/App.jsx";
 import App10 from "./Foreign/src10/App.jsx";
 // const router = createBrowserRouter([
@@ -57,7 +57,7 @@ const router = createBrowserRouter(
       <Route path="login" element={<App5 />} />
       <Route path="gallery" element={<App6 />} />
       <Route path="crypto" element={<App7 />} />
-      <Route path="counter" element={<Button />} />
+      <Route path="counter" element={<Buttonch />} />
       <Route path="autobg" element={<App9 />} />
       <Route path="btnbg" element={<App10 />} />
     </Route>
