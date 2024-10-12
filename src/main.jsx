@@ -12,7 +12,7 @@ import About from "./components/About/About.jsx";
 import Contact from "./components/Contact/Conatct.jsx";
 import User from "./components/User/User.jsx";
 import Github, { githubInfoLoader } from "./components/Github/Github.jsx";
-// import App1 from "./Foreign/src1/App.jsx";
+import App1 from "./Foreign/src1/App.jsx";
 import App2 from "./Foreign/src2/App.jsx";
 import App3 from "./Foreign/src3/App.jsx";
 import App4 from "./Foreign/src4/App.jsx";
