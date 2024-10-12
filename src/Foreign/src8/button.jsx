@@ -1,6 +1,6 @@
 let count = 0;
 let text = document.querySelector(".text");
-import "./button.css";
+import "./Button.css";
 
 // alert("Enjoy the Counter Game")
 function CallPlus() {
