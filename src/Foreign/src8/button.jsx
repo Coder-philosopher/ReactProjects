@@ -1,49 +1,39 @@
-let count = 0;
-let text = document.querySelector(".text");
+import React, { useState } from "react";
 import "./Button.css";
 
-// alert("Enjoy the Counter Game")
-function CallPlus() {
-  count = count + 1;
-
-  if (count > 12) {
-    text.innerText = `You have reached the UpperLimit(Only 12 count allowed)`;
-  } else {
-    text.innerText = `Total Count: ${count}`;
-  }
-}
-function CallMinus() {
-  count = count - 1;
-  if (count < -12) {
-    text.innerText = `You have reached the LowerLimit(Only -12 count allowed)`;
-  } else {
-    text.innerText = `Total Count: ${count}`;
-  }
-}
 function Button() {
+  const [count, setCount] = useState(0);
+  const [message, setMessage] = useState("");
+
+  const CallPlus = () => {
+    if (count < 12) {
+      setCount(count + 1);
+      setMessage(`Total Count: ${count + 1}`);
+    } else {
+      setMessage("You have reached the Upper Limit (Only 12 count allowed)");
+    }
+  };
+
+  const CallMinus = () => {
+    if (count > -12) {
+      setCount(count - 1);
+      setMessage(`Total Count: ${count - 1}`);
+    } else {
+      setMessage("You have reached the Lower Limit (Only -12 count allowed)");
+    }
+  };
+
   return (
     <>
-      <button
-        className="CounterButton"
-        onClick={() => {
-          CallPlus();
-        }}
-      >
+      <button className="CounterButton" onClick={CallPlus}>
         Counter++
       </button>
-      <button
-        className="CounterButton"
-        onClick={() => {
-          CallMinus();
-        }}
-      >
+      <button className="CounterButton" onClick={CallMinus}>
         Counter--
       </button>
+      <p className="text">{message}</p>
     </>
   );
-  //it is said that we should give reference to the function to be called not to call function directly
-  //hence instead of CallPlus() we should give CallPlus
-  //but idk why it is not working
 }
 
 export default Button;
